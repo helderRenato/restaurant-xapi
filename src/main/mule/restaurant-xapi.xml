@@ -10,8 +10,4 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="restaurant-xapiFlow" doc:id="2bf2ba6f-86b8-43f0-87eb-99c525d6394e" >
 		<http:listener doc:name="Listener" doc:id="45d4e906-2784-4b7b-a60e-3835df6489e0" config-ref="HTTP_Listener_config" path="/tear"/>
 		<logger level="INFO" doc:name="Logger" doc:id="0fd4934f-5ee2-45f5-b41e-685b65c3e0b8" message="TESTEs"/>
-	<flow name="restaurant-xapiFlow" doc:id="2e07eb8f-d870-4f9e-8081-c7a272cb22de" >
-		<http:listener doc:name="Listener" doc:id="609a8a83-b84c-4acc-a1e6-4ad6abb5433d" />
-		<logger level="INFO" doc:name="Logger" doc:id="00ad24a8-a51e-4bd6-a2af-255e746145fb" />
-	</flow>
 </mule>
