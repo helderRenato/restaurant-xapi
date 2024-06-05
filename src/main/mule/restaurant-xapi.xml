@@ -4,6 +4,12 @@
 	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="f9b9baf6-f07b-4863-ad23-a994a0233628" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="restaurant-xapiFlow" doc:id="2bf2ba6f-86b8-43f0-87eb-99c525d6394e" >
+		<http:listener doc:name="Listener" doc:id="45d4e906-2784-4b7b-a60e-3835df6489e0" config-ref="HTTP_Listener_config" path="/tear"/>
+		<logger level="INFO" doc:name="Logger" doc:id="0fd4934f-5ee2-45f5-b41e-685b65c3e0b8" message="TESTEs"/>
 	<flow name="restaurant-xapiFlow" doc:id="2e07eb8f-d870-4f9e-8081-c7a272cb22de" >
 		<http:listener doc:name="Listener" doc:id="609a8a83-b84c-4acc-a1e6-4ad6abb5433d" />
 		<logger level="INFO" doc:name="Logger" doc:id="00ad24a8-a51e-4bd6-a2af-255e746145fb" />
